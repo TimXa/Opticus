@@ -1,0 +1,76 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "shortDescription" : "Any-glasses classifier from mantasu\/glasses-detector.",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1)",
+        "shortDescription" : "",
+        "shape" : "[1]",
+        "name" : "eyeglassesProbability",
+        "type" : "MultiArray"
+      }
+    ],
+    "storagePrecision" : "Float16",
+    "modelParameters" : [
+
+    ],
+    "author" : "Mantas Birškus; Core ML conversion for Opticus",
+    "specificationVersion" : 8,
+    "license" : "MIT",
+    "mlProgramOperationTypeHistogram" : {
+      "Ios17.mul" : 2,
+      "Ios17.linear" : 1,
+      "Ios17.sub" : 1,
+      "Ios17.conv" : 56,
+      "Ios16.sigmoid" : 1,
+      "Ios17.concat" : 16,
+      "Ios16.maxPool" : 1,
+      "Ios16.reduceMean" : 1,
+      "Ios16.relu" : 37,
+      "Ios17.squeeze" : 1,
+      "Ios17.cast" : 1,
+      "Split" : 13
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "14.0",
+      "tvOS" : "17.0",
+      "visionOS" : "1.0",
+      "watchOS" : "10.0",
+      "iOS" : "17.0",
+      "macCatalyst" : "17.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "height" : "256",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "256",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 256 × 256)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "",
+        "name" : "face"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.source_dialect" : "TorchScript",
+      "com.github.apple.coremltools.version" : "8.3.0",
+      "com.github.apple.coremltools.source" : "torch==2.8.0"
+    },
+    "generatedClassName" : "EyeglassesClassifier",
+    "method" : "predict"
+  }
+]
